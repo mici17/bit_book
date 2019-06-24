@@ -1,6 +1,8 @@
 import React from 'react';
 import { RegisterPage } from './RegisterPage/RegisterPage'
 import { LoginPage } from './loginPage/LoginPage'
+import { Header } from './Header/Header'
+import { Main } from './Main'
 
 
 export class App extends React.Component {
@@ -34,6 +36,13 @@ export class App extends React.Component {
             return (
                 <>
                     <LoginPage onLoginClickChange={this.onLoginClickChange} onRegisterClickChange={this.onRegisterClickChange} />
+                </>
+            )
+        } else {
+            return (
+                <>
+                    <Header />
+                    <Main />
                 </>
             )
         }

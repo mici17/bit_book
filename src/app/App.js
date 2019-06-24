@@ -8,7 +8,7 @@ export class App extends React.Component {
         super(props)
         this.state = {
             register: true,
-            token: null
+            token: null,
         }
         this.onRegisterClickChange = this.onRegisterClickChange.bind(this);
         this.onLoginClickChange = this.onLoginClickChange.bind(this);

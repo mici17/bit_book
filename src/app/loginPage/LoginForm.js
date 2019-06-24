@@ -7,8 +7,8 @@ export const LoginForm = (props) => {
     return (
         <div className="login-form-container">
             <div className="login-cards">
-                <Link to="#" className="login-login-card" onClick={props.onLoginClickChange}>Login</Link>
-                <Link to="#" className="login-register-card" onClick={props.onRegisterClickChange}>Register</Link>
+                <Link to="/login" className="login-login-card" onClick={props.onLoginClickChange}>Login</Link>
+                <Link to="/register" className="login-register-card" onClick={props.onRegisterClickChange}>Register</Link>
             </div>
             <form className="login-form">
                 <label>email

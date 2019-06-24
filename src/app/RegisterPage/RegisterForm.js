@@ -6,8 +6,8 @@ export const RegisterForm = (props) => {
     return (
         <div className="register-form-container">
             <div className="register-cards">
-                <Link to="#" className="register-login-card" onClick={props.onLoginClickChange}>Login</Link>
-                <Link to="#" className="register-register-card" onClick={props.onRegisterClickChange}>Register</Link>
+                <Link to="/login" className="register-login-card" >Login</Link>
+                <Link to="/register" className="register-register-card">Register</Link>
             </div>
             <form className="register-form">
                 <label>Name
@@ -19,7 +19,7 @@ export const RegisterForm = (props) => {
                 <label>pass
                     <input type="password" name="password" placeholder="Min 6 characters" value={props.password} className="register-input" onChange={props.onInputChange} />
                 </label>
-                <button className="register-button">Register</button>
+                <button className="register-button" onClick={props.onSubmitRegister}>Register</button>
             </form>
         </div>
     )

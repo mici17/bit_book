@@ -5,15 +5,27 @@ export class FeedPage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-
+            posts: [],
         }
     }
 
+    loadPosts() {
+        fetchPosts()
+            .then(posts =>
+                this.setState({ posts }))
+    }
+
+    componentDidMount() {
+        this.loadPosts()
+
+    }
 
     render() {
         return (
             <>
-                <h1>Kidanje</h1>
+                <div>
+
+                </div>
 
             </>
         )

@@ -25,26 +25,26 @@ export class App extends React.Component {
     }
 
     render() {
-        const { register, token } = this.state
-        if (token === null && register === true) {
-            return (
-                <>
-                    <RegisterPage onRegisterClickChange={this.onRegisterClickChange} onLoginClickChange={this.onLoginClickChange} />
-                </>
-            )
-        } else if (token === null && register === false) {
-            return (
-                <>
-                    <LoginPage onLoginClickChange={this.onLoginClickChange} onRegisterClickChange={this.onRegisterClickChange} />
-                </>
-            )
-        } else {
-            return (
-                <>
-                    <Header />
-                    <Main />
-                </>
-            )
-        }
+        // const { register, token } = this.state
+        // if (token === null && register === true) {
+        //     return (
+        //         <>
+        //             <RegisterPage onRegisterClickChange={this.onRegisterClickChange} onLoginClickChange={this.onLoginClickChange} />
+        //         </>
+        //     )
+        // } else if (token === null && register === false) {
+        //     return (
+        //         <>
+        //             <LoginPage onLoginClickChange={this.onLoginClickChange} onRegisterClickChange={this.onRegisterClickChange} />
+        //         </>
+        //     )
+        // } else {
+        return (
+            <>
+                <Header />
+                <Main />
+            </>
+        )
     }
 }
+// }

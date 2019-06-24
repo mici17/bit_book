@@ -7,7 +7,7 @@ export const Header = () => {
         <header>
             <div className="header-container">
                 <div className="header-logo">
-                    <h3>-m "Pokidali"</h3>
+                    <p>-m "Pokidali"</p>
                 </div>
                 <div className="header-links">
                     <Link to="/feed" className="header-feed">Feed</Link>

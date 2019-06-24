@@ -10,25 +10,36 @@ display: flex;
 font-size: 20px;
 }
 
+.login-cards a:link,
+.login-cards a:active,
+.login-cards a:hover,
+.login-cards a:visited{
+    text-decoration: none;
+    color: #3aafa9;
+}
+
+
+
 .login-login-card {
    width: 50%;
    text-align: center;
-   border: 1px solid black;
+   border: 1px solid #3aafa9;
    border-radius: 25px 25px 0 0;
    padding: 2%;
+   background-color: #def2f1;
 }
 
 .login-register-card {
     text-align: center;
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid #3aafa9;
     border-radius: 25px 25px 0 0;
     padding: 2%;
 }
 
 .login-form {
     height: 350px;
-    border: 1px solid black;
+    border: 1px solid #3aafa9;
     border-top: none;
     padding: 5%;
 }
@@ -44,4 +55,7 @@ font-size: 20px;
     width: 100%;
     padding: 2%;
     border-radius: 10px;
+    background-color: #def2f1;
+    border: none;
+    color: #3aafa9;
 }

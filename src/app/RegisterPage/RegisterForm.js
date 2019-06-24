@@ -1,12 +1,12 @@
 import React from 'react';
 import './RegisterForm.css'
 
-export const RegisterForm = () => {
+export const RegisterForm = (props) => {
     return (
         <div className="register-form-container">
             <div className="register-cards">
-                <span className="register-login-card">Login</span>
-                <span className="register-register-card">Register</span>
+                <span className="register-login-card" onClick={props.onLoginClickChange}><a href="#">Login</a></span>
+                <span className="register-register-card" onClick={props.onRegisterClickChange}><a href="#">Register</a></span>
             </div>
             <form className="register-form">
                 <label>Name

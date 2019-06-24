@@ -1,0 +1,47 @@
+.login-form-container {
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+
+.login-cards {
+display: flex;
+font-size: 20px;
+}
+
+.login-login-card {
+   width: 50%;
+   text-align: center;
+   border: 1px solid black;
+   border-radius: 25px 25px 0 0;
+   padding: 2%;
+}
+
+.login-register-card {
+    text-align: center;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 25px 25px 0 0;
+    padding: 2%;
+}
+
+.login-form {
+    height: 350px;
+    border: 1px solid black;
+    border-top: none;
+    padding: 5%;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 40px;
+   
+}
+
+
+.login-button {
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+}

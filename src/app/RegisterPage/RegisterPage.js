@@ -15,7 +15,13 @@ export const RegisterPage = (props) => {
                     </article>
                 </section>
             </div>
-            <RegisterForm onRegisterClickChange={props.onRegisterClickChange} onLoginClickChange={props.onLoginClickChange} />
+            <RegisterForm onRegisterClickChange={props.onRegisterClickChange}
+                onLoginClickChange={props.onLoginClickChange}
+                onInputChange={props.onInputChange}
+                name={props.name}
+                email={props.email}
+                password={props.password}
+            />
         </div>
     )
 }

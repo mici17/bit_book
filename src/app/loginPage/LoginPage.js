@@ -14,7 +14,13 @@ export const LoginPage = (props) => {
                     </article>
                 </section>
             </div>
-            <LoginForm onLoginClickChange={props.onLoginClickChange} onRegisterClickChange={props.onRegisterClickChange} />
+            <LoginForm onLoginClickChange={props.onLoginClickChange}
+                onRegisterClickChange={props.onRegisterClickChange}
+                onInputChange={props.onInputChange}
+                email={props.email}
+                password={props.password}
+                onSubmitLogIn={props.onSubmitLogIn}
+            />
         </div>
     )
 }

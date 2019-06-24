@@ -11,13 +11,13 @@ export const RegisterForm = (props) => {
             </div>
             <form className="register-form">
                 <label>Name
-                    <input type="text" placeholder="Full Name" value="" className="register-input" />
+                    <input type="text" name="name" placeholder="Full Name" value={props.name} className="register-input" onChange={props.onInputChange} />
                 </label>
                 <label>email
-                    <input type="email" placeholder="Email Address" value="" className="register-input" />
+                    <input type="email" name="email" placeholder="Email Address" value={props.email} className="register-input" onChange={props.onInputChange} />
                 </label>
                 <label>pass
-                    <input type="password" placeholder="Min 6 characters" value="" className="register-input" />
+                    <input type="password" name="password" placeholder="Min 6 characters" value={props.password} className="register-input" onChange={props.onInputChange} />
                 </label>
                 <button className="register-button">Register</button>
             </form>

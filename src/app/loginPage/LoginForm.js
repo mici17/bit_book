@@ -1,13 +1,14 @@
 import React from 'react';
-import './LoginForm.css'
+import './LoginForm.css';
+import { Link } from 'react-router-dom'
 
 export const LoginForm = (props) => {
     console.log('click')
     return (
         <div className="login-form-container">
             <div className="login-cards">
-                <span className="login-login-card" onClick={props.onLoginClickChange}><a href="#">Login</a></span>
-                <span className="login-register-card" onClick={props.onRegisterClickChange}><a href="#">Register</a></span>
+                <Link to="#" className="login-login-card" onClick={props.onLoginClickChange}>Login</Link>
+                <Link to="#" className="login-register-card" onClick={props.onRegisterClickChange}>Register</Link>
             </div>
             <form className="login-form"  >
                 <label>email

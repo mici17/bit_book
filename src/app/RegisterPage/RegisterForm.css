@@ -6,23 +6,33 @@
     display: flex;
     font-size: 20px;
 }
+
+.register-cards a:link,
+.register-cards a:active,
+.register-cards a:hover,
+.register-cards a:visited{
+    text-decoration: none;
+    color: #3aafa9;
+}
+
 .register-login-card{
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid #3aafa9;
     text-align: center;
     padding:2%;
     border-radius:  25px 25px 0 0;
 }
 .register-register-card{
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid #3aafa9;
     text-align:center;
     padding:2%;
     border-radius: 25px 25px 0 0;
+    background-color: #def2f1;
 }
 .register-form{
     height: 350px;
-    border: 1px solid black;
+    border: 1px solid #3aafa9;
     border-top:none;
     padding: 5%;
 }
@@ -32,4 +42,7 @@
     padding: 2%;
     border-radius: 10px;
     margin-top: 20px;
+    background-color: #def2f1;
+    border: none;
+    color: #3aafa9;
 }

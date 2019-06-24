@@ -12,10 +12,10 @@ export const LoginForm = (props) => {
             </div>
             <form className="login-form"  >
                 <label>email
-                    <input type="email" placeholder="Email Address" value="" className="login-input" />
+                    <input type="email" name="email" placeholder="Email Address" value="" className="login-input" />
                 </label>
                 <label>pass
-              <input type="password" placeholder="Password" value="" className="login-input" />
+              <input type="password" name="password" placeholder="Password" value="" className="login-input" />
                 </label>
                 <button className="login-button">Login</button>
             </form>

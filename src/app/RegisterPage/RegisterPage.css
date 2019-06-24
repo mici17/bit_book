@@ -1,0 +1,10 @@
+.register-container{
+    display: flex;
+    width: 60%;
+    margin: 300px auto;
+}
+
+.register-text{
+    width: 50%;
+    padding: 70px 50px;
+}

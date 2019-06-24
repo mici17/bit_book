@@ -1,0 +1,35 @@
+.register-form-container{
+    width: 50%;
+    margin: 0 auto;
+}
+.register-cards{
+    display: flex;
+    font-size: 20px;
+}
+.register-login-card{
+    width: 50%;
+    border: 1px solid black;
+    text-align: center;
+    padding:2%;
+    border-radius:  25px 25px 0 0;
+}
+.register-register-card{
+    width: 50%;
+    border: 1px solid black;
+    text-align:center;
+    padding:2%;
+    border-radius: 25px 25px 0 0;
+}
+.register-form{
+    height: 350px;
+    border: 1px solid black;
+    border-top:none;
+    padding: 5%;
+}
+
+.register-button{
+    width: 100%;
+    padding: 2%;
+    border-radius: 10px;
+    margin-top: 20px;
+}

@@ -15,6 +15,9 @@ export const VideoPost = (props) => {
                 src={`${post.videoUrl}`}
                 frameBorder="0"
             ></iframe>
+            <div className="videoPost-comments">
+                <p>Comments:{post.comments.length}</p>
+            </div>
         </div>
     )
 }

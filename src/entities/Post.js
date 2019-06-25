@@ -9,5 +9,6 @@ export class Post {
         this.videoUrl = postObj.videoUrl;
         this.imageUrl = postObj.imageUrl;
         this.text = postObj.text;
+        this.comments = postObj.comments;
     }
 }

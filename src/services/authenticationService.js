@@ -1,4 +1,3 @@
-import React from 'react';
 
 const authenticationLogIn = (email, password) => {
     return fetch(('https://book-api.hypetech.xyz/v1/auth/login'), {

@@ -25,6 +25,7 @@ export class App extends React.Component {
                     <Switch>
                         <Route path={`/register`} component={RegisterPage} />
                         <Route path={`/login`} component={LoginPage} />
+                        <Redirect to={`/register`} component={RegisterPage} />
                     </Switch>
 
                 </>

@@ -1,10 +1,12 @@
 .textPost-text{
     width: 100%;
     border: 1px solid #2b7a78;
+    background-color: #def2f1;
     border-radius: 70px;
     margin: 50px 0 50px 0;
 }
 .textPost-text p{
     width: 100%;
     padding: 40px;
+    color: #17252a;
     }

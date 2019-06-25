@@ -11,3 +11,8 @@
     padding: 40px;
     border-radius: 70px;
 }
+.imagePost-comments{
+    text-align: right;
+    margin-right: 70px;
+    margin-bottom: 20px;
+}

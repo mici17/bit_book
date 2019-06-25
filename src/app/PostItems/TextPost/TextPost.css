@@ -5,8 +5,14 @@
     border-radius: 70px;
     margin: 50px 0 50px 0;
 }
-.textPost-text p{
+.textPost-text article{
     width: 100%;
     padding: 40px;
     color: #17252a;
-    }
+}
+
+.textPost-comments{
+    text-align: right;
+    margin-right: 70px;
+    margin-bottom: 20px;
+}

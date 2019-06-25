@@ -20,6 +20,7 @@ export const RegisterForm = (props) => {
                     <input type="password" name="password" placeholder="Min 6 characters" value={props.password} className="register-input" onChange={props.onInputChange} />
                 </label>
                 <button className="register-button" onClick={props.onSubmitRegister}>Register</button>
+                <p>{props.error}</p>
             </form>
         </div>
     )

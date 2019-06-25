@@ -11,7 +11,18 @@ const authenticationLogIn = (email, password) => {
             password: password
         })
     })
-        .then((response) => response.json())
+        .then(response => {
+            const invalidStatuses = [401, 403, 422]
+            if (invalidStatuses.includes(response.status)) {
+                return Promise.reject("Unable to login");
+            }
+
+            return response.json();
+        })
+        .then((data) => {
+            localStorage.setItem('loginToken', data.accessToken)
+            return data;
+        })
 }
 
 
@@ -29,7 +40,19 @@ const authenticationRegister = (name, email, password) => {
         })
 
     })
-        .then((response) => response.json())
+        .then(response => {
+            const invalidStatuses = [401, 403, 422]
+            if (invalidStatuses.includes(response.status)) {
+                return Promise.reject("Unable to register");
+            }
+
+            return response.json();
+        })
+        .then((data) => {
+            localStorage.setItem('registerToken', data.accessToken)
+            return data;
+        })
+
 
 }
 

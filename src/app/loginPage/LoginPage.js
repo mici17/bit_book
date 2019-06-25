@@ -8,15 +8,14 @@ export class LoginPage extends React.Component {
         super(props)
         this.state = {
             email: "",
-            password: ""
-
+            password: "",
+            error: ""
         }
 
 
         this.onInputChange = this.onInputChange.bind(this);
         this.onSubmitLogIn = this.onSubmitLogIn.bind(this);
     }
-
 
 
     onInputChange(e) {
@@ -28,13 +27,18 @@ export class LoginPage extends React.Component {
 
     fetchLogInToken() {
         const { email, password } = this.state;
-        return authenticationLogIn(email, password)
+        authenticationLogIn(email, password)
             .then(response => {
-                localStorage.setItem('loginToken', response.accessToken)
+                document.location.reload()
+                return response
+
             })
-
+            .catch((errorMessage) => {
+                this.setState({
+                    error: errorMessage
+                })
+            })
     }
-
 
     onSubmitLogIn(e) {
         e.preventDefault();
@@ -42,9 +46,8 @@ export class LoginPage extends React.Component {
 
     }
 
-
     render() {
-        const { password, email } = this.state;
+        const { password, email, error } = this.state;
 
         return (
             <div className="login-container" >
@@ -61,10 +64,12 @@ export class LoginPage extends React.Component {
                     email={email}
                     password={password}
                     onSubmitLogIn={this.onSubmitLogIn}
+                    error={error}
                 />
             </div>
         )
     }
 
 }
+
 

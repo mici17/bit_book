@@ -1,0 +1,11 @@
+.imagePost-image{
+    width: 100%;
+    border: 1px solid #2b7a78;
+    border-radius: 70px;
+    margin: 50px 0 50px 0;
+}
+.imagePost-image img{
+    width: 100%;
+    padding: 40px;
+    border-radius: 70px;
+}

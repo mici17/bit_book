@@ -1,5 +1,8 @@
 import React from 'react'
 import { fetchPosts } from '../../services/fetchPosts'
+import { PostItem } from '../PostItem/PostItem'
+import './FeedPage.css'
+
 
 export class FeedPage extends React.Component {
     constructor(props) {
@@ -11,8 +14,10 @@ export class FeedPage extends React.Component {
 
     loadPosts() {
         fetchPosts()
-            .then(posts =>
-                this.setState({ posts }))
+            .then(posts => {
+                this.setState({ posts })
+                return posts
+            })
     }
 
     componentDidMount() {
@@ -21,12 +26,12 @@ export class FeedPage extends React.Component {
     }
 
     render() {
+        const { posts } = this.state;
         return (
             <>
-                <div>
-
+                <div className="feedPage-container">
+                    {posts.map(post => <PostItem post={post} />)}
                 </div>
-
             </>
         )
     }

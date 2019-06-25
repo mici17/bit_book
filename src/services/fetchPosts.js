@@ -6,7 +6,6 @@ export const fetchPosts = () => {
         .then(posts => {
             return posts.map((post, i) => {
                 return new Post(post)
-
             })
         })
 }

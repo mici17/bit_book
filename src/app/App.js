@@ -1,7 +1,7 @@
 import React from 'react';
 import { RegisterPage } from './RegisterPage/RegisterPage';
 import { LoginPage } from './loginPage/LoginPage';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 
 

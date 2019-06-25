@@ -12,6 +12,7 @@ export class FeedPage extends React.Component {
         }
     }
 
+
     loadPosts() {
         fetchPosts()
             .then(posts => {

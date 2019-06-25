@@ -1,0 +1,39 @@
+.header-logo{
+    font-size: 35px;
+    margin: 0;
+    padding: 4px;
+    color: #feffff;
+}
+
+header {
+    background-color: #3aafa9;
+}
+
+.header-container{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header-links{
+    padding: 15px;
+}
+
+.header-links a:active,
+.header-links a:hover,
+.header-links a:visited,
+.header-links a:link{
+    color: #feffff;
+    text-decoration: none;
+    font-size: 20px;    
+}
+
+.header-feed{
+    margin-right: 25px;
+}
+
+.header-people{
+    margin-right: 25px;
+}

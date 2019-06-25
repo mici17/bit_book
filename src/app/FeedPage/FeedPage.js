@@ -30,7 +30,7 @@ export class FeedPage extends React.Component {
         return (
             <>
                 <div className="feedPage-container">
-                    {posts.map(post => <PostItem post={post} />)}
+                    {posts.map((post, i) => <PostItem post={post} key={i} />)}
                 </div>
             </>
         )

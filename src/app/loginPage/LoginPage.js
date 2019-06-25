@@ -29,7 +29,9 @@ export class LoginPage extends React.Component {
         const { email, password } = this.state;
         authenticationLogIn(email, password)
             .then(response => {
-                console.log('Success');
+                document.location.reload()
+                return response
+
             })
             .catch((errorMessage) => {
                 this.setState({

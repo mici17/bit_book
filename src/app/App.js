@@ -2,6 +2,8 @@ import React from 'react';
 import { RegisterPage } from './RegisterPage/RegisterPage';
 import { LoginPage } from './loginPage/LoginPage';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { Header } from './Header/Header';
+import { Main } from './Main'
 
 
 
@@ -36,9 +38,15 @@ export class App extends React.Component {
             )
         } else {
             return (
-                <h1>Kidamo</h1>
+                <>
+                    <Header />
+                    <Switch>
+                        <Redirect to={`/feed`} component={Main} />
+                    </Switch>
+                    <Main />
+                </>
             )
         }
     }
 }
-// }
+

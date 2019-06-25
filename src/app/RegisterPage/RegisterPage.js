@@ -12,7 +12,7 @@ export class RegisterPage extends React.Component {
             name: "",
             email: "",
             password: "",
-            error: null
+            error: ""
 
 
         }
@@ -32,9 +32,15 @@ export class RegisterPage extends React.Component {
     fetchRegisterToken() {
         const { email, password, name } = this.state;
         authenticationRegister(name, email, password)
-            .then(() =>
+            .then((response) => {
                 this.props.history.push('/login')
-            )
+                return response
+            })
+            .catch((errorMessage) => {
+                this.setState({
+                    error: errorMessage
+                })
+            })
     }
 
 

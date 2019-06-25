@@ -9,11 +9,11 @@ export class App extends React.Component {
     constructor(props) {
         super(props)
 
-        // const loginToken = localStorage.getItem('loginToken')
-        // const token = loginToken !== undefined ? loginToken : null
+        const loginToken = localStorage.getItem('loginToken')
+        const token = loginToken ? loginToken : null
 
         this.state = {
-            token: null
+            token
         }
 
 

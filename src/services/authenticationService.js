@@ -41,10 +41,17 @@ const authenticationRegister = (name, email, password) => {
         })
 
     })
-        .then((response) => response.json())
         .then(response => {
-            localStorage.setItem('registerToken', response.accessToken)
-            return response
+            const invalidStatuses = [401, 403, 422]
+            if (invalidStatuses.includes(response.status)) {
+                return Promise.reject("Unable to register");
+            }
+
+            return response.json();
+        })
+        .then((data) => {
+            localStorage.setItem('registerToken', data.accessToken)
+            return data;
         })
 
 

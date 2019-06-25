@@ -1,12 +1,12 @@
 import { Post } from '../entities/Post'
 
-export const fetchPosts = (token) => {
-    return fetch(("http://book-api-dev.hypetech.xyz/posts"), {
+export const fetchPosts = () => {
+    return fetch((`https://book-api.hypetech.xyz/v1/posts`), {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
             'x-api-key': 'B1tD3V',
-            'Authorization': 'Bearer ' + token
+            'Authorization': `Bearer ${localStorage.getItem("loginToken")}`
         },
     }
 
@@ -14,7 +14,7 @@ export const fetchPosts = (token) => {
     )
         .then(response => response.json())
         .then(posts => {
-            return posts.map((post, i) => {
+            return posts.map((post) => {
                 return new Post(post)
             })
         })

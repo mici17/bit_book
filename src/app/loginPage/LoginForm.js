@@ -18,6 +18,7 @@ export const LoginForm = (props) => {
               <input type="password" name="password" placeholder="Password" value={props.password} className="login-input" onChange={props.onInputChange} />
                 </label>
                 <button className="login-button" onClick={props.onSubmitLogIn}>Login</button>
+                <p>{props.error}</p>
             </form>
         </div >
     )

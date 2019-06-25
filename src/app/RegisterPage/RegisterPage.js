@@ -11,7 +11,9 @@ export class RegisterPage extends React.Component {
         this.state = {
             name: "",
             email: "",
-            password: ""
+            password: "",
+            error: null
+
 
         }
 
@@ -30,9 +32,9 @@ export class RegisterPage extends React.Component {
     fetchRegisterToken() {
         const { email, password, name } = this.state;
         authenticationRegister(name, email, password)
-            .then(response => {
-                localStorage.setItem('registerToken', response.accessToken)
-            })
+            .then(() =>
+                this.props.history.push('/login')
+            )
     }
 
 
@@ -44,7 +46,7 @@ export class RegisterPage extends React.Component {
 
 
     render() {
-        const { name, email, password } = this.state;
+        const { name, email, password, error } = this.state;
 
         return (
             <div className="register-container" >
@@ -62,6 +64,7 @@ export class RegisterPage extends React.Component {
                     email={email}
                     password={password}
                     onSubmitRegister={this.onSubmitRegister}
+                    error={error}
                 />
             </div>
 

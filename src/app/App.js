@@ -8,6 +8,10 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 export class App extends React.Component {
     constructor(props) {
         super(props)
+
+        // const loginToken = localStorage.getItem('loginToken')
+        // const token = loginToken !== undefined ? loginToken : null
+
         this.state = {
             token: null
         }

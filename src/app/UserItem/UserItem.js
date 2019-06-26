@@ -9,7 +9,7 @@ export const UserItem = (props) => {
         <>
         <Link to={`/people/${user.id}`}>
         <div className="userItem-user-container">
-        <div className="userItem-img-holder"> <img src={user.avatar}/></div>
+        <div className="userItem-img-holder"><img src={user.avatar}/></div>
         <div>
             <p className="userItem-name">{`${user.firstName} ${user.lastName}`}</p>
             <p clasName="userItem-bio">{user.bio}</p>

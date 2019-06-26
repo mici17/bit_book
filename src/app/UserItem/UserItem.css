@@ -1,0 +1,24 @@
+.userItem-user-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 5%;
+}
+
+.userItem-img-holder {
+    margin-right: 15%;
+}
+
+.userItem-img-holder img {
+    width: 300px;
+    box-shadow: 0px 3px 14px 0px rgba(115,106,115,1);
+
+}
+
+.userItem-name {
+    font-size: 30px;
+}
+
+.userItem-bio {
+    font-size: 20px;
+
+}

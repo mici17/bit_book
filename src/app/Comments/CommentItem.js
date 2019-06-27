@@ -35,13 +35,13 @@ export class CommentItem extends React.Component {
 
         return (
             <>
-
-                <div className="commentItem-user">
-                    <img src={user.avatar} alt="" className="user photo" />
-                    <p className="commentItem-name">{user.first}</p>
+                <div className="commentItem-singleComment">
+                    <div className="commentItem-user">
+                        <img src={user.avatar} alt="" className="user-photo" />
+                        <p className="commentItem-name">{user.first}</p>
+                    </div>
+                    <p className="commentItem-body">{comment.body}</p>
                 </div>
-                <p className="commentItem-body">{comment.body}</p>
-
             </>
         )
     }

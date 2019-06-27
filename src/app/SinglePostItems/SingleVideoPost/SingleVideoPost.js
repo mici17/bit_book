@@ -7,7 +7,7 @@ export const SingleVideoPost = (props) => {
         <div className="single-videoPost-player">
             <div className="singleVideo-iframe">
                 <iframe id="existing-iframe-example" title="video"
-                    width="500" height="800"
+                    width="1280" height="720"
                     src={`${post.videoUrl}`}
                     frameBorder="0"
                 ></iframe>

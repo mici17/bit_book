@@ -27,6 +27,7 @@ export class CommentItem extends React.Component {
 
         const { comment } = this.props;
         const { user } = this.state;
+        const errorIMG = "https://roundhouse-assets.s3.amazonaws.com/assets/Image/15214-fitandcrop-1200x681.jpg";
 
 
         if (!user) {

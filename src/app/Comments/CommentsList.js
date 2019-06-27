@@ -13,7 +13,7 @@ export const CommentsList = (props) => {
         )
     }
     return (
-        <div>
+        <div className="comments-list-single-comment">
             {comments.map((comment, i) => {
                 return (
                     <div key={i}>

@@ -3,7 +3,11 @@
      width: 80%;
      margin: auto;
      margin-top: 20px;
- }
+    }
+    
+.userPage-holder:last-child{
+    margin-bottom: 30px;
+}
 
  .fas {
      position: absolute;

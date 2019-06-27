@@ -1,6 +1,24 @@
 .commentItem-body {
-    width:60%;
+    width:100%;
     margin: 15px auto;
     font-size: 18px;
     
+}
+
+.user-photo{
+    border-radius: 30px;
+}
+
+.commentItem-user img:hover{
+animation: forwards 10px;
+}
+
+.commentItem-singleComment{
+    padding: 20px;
+    width:60%;
+    margin: 0 auto;
+    background-color: #def2f1;
+    border: 1px solid #3aafa9;
+    margin-bottom: 20px;
+    border-radius: 30px;
 }

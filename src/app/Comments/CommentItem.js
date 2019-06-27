@@ -27,6 +27,7 @@ export class CommentItem extends React.Component {
 
         const { comment } = this.props;
         const { user } = this.state;
+        const errorIMG = "https://roundhouse-assets.s3.amazonaws.com/assets/Image/15214-fitandcrop-1200x681.jpg";
 
 
         if (!user) {
@@ -37,8 +38,8 @@ export class CommentItem extends React.Component {
             <>
 
                 <div className="commentItem-user">
-                    <img src={user.avatar} alt="" className="user photo" />
-                    <p className="commentItem-name">{user.first}</p>
+                    {(!user.avatar) ? <img src={errorIMG} alt="img" /> : <img src={user.avatar} alt="user" />}
+                    <p className="commentItem-name">{(!user.firstName) ? <p>No name</p> : user.firstName}</p>
                 </div>
                 <p className="commentItem-body">{comment.body}</p>
 

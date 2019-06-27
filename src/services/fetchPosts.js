@@ -23,3 +23,19 @@ export const fetchPosts = () => {
             return posts
         })
 }
+
+export const fetchSinglePost = (postId) => {
+    return fetch((`https://book-api.hypetech.xyz/v1/posts/${postId}`), {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'B1tD3V',
+            'Authorization': `Bearer ${localStorage.getItem("loginToken")}`
+
+        }
+    })
+        .then(response => response.json())
+        .then(post => {
+            return new Post(post)
+        })
+}

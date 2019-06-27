@@ -27,11 +27,10 @@ export class LoginPage extends React.Component {
 
     fetchLogInToken() {
         const { email, password } = this.state;
-        authenticationLogIn(email, password)
-            .then(response => {
-                document.location.reload()
-                return response
 
+        authenticationLogIn(email, password)
+            .then(() => {
+                this.props.history.push('/feed');
             })
             .catch((errorMessage) => {
                 this.setState({

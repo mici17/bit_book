@@ -1,0 +1,11 @@
+.commentsList-noComment {
+    width: 80%;
+    margin: auto;
+}
+
+.commentsList-noComment-p {
+    width: 60%;
+    margin: auto;
+    padding-bottom: 30px;
+    font-size: 22px;
+}

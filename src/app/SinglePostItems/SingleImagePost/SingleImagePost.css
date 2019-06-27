@@ -1,0 +1,10 @@
+.singleImagePost-image {
+    width: 80%;
+    margin: auto;
+}
+
+.singleImagePost-img {
+    display: block;
+    width: 60%;
+    margin: 80px auto;
+}

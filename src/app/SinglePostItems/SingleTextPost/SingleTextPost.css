@@ -1,0 +1,13 @@
+.singleTextPost-text-holder {
+    width:80%;
+    margin: auto;
+}
+
+.singleTextPost-text {
+    display: block;
+    margin-top: 80px;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 20px;
+}

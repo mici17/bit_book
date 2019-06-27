@@ -1,4 +1,11 @@
-import { Post } from '../entities/Post'
+import { Post } from '../entities/Post';
+import jwtDecode from 'jwt-decode';
+
+const loadId = () => {
+    const decoded = jwtDecode(localStorage.getItem("loginToken"));
+    console.log(decoded);
+    return decoded.id;
+}
 
 export const fetchPosts = () => {
     return fetch((`https://book-api.hypetech.xyz/v1/posts?_embed=comments`), {
@@ -56,3 +63,22 @@ export const fetchSingleUserPostsNumber = (userId) => {
         .then(response => response.headers.get("x-total-count"))
 
 }
+
+
+export const fetchProfileUserPostsNumber = () => {
+    return fetch((`https://book-api.hypetech.xyz/v1/users/${loadId()}/posts?_limit=0`), {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'B1tD3V',
+            'Authorization': `Bearer ${localStorage.getItem("loginToken")}`
+
+        }
+    })
+        .then(response => response.headers.get("x-total-count"))
+
+}
+
+
+
+

@@ -24,6 +24,8 @@ export const fetchPosts = () => {
         })
 }
 
+
+
 export const fetchSinglePost = (postId) => {
     return fetch((`https://book-api.hypetech.xyz/v1/posts/${postId}`), {
         method: "GET",
@@ -38,4 +40,19 @@ export const fetchSinglePost = (postId) => {
         .then(post => {
             return new Post(post)
         })
+}
+
+
+export const fetchSingleUserPostsNumber = (userId) => {
+    return fetch((`https://book-api.hypetech.xyz/v1/users/${userId}/posts?_limit=0`), {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'B1tD3V',
+            'Authorization': `Bearer ${localStorage.getItem("loginToken")}`
+
+        }
+    })
+        .then(response => response.headers.get("x-total-count"))
+
 }

@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     User
 } from '../entities/User';
@@ -22,7 +21,6 @@ export const fetchUsers = () => {
         })
 
 }
-
 
 export const fetchSingleUser = (userId) => {
     return fetch((`https://book-api.hypetech.xyz/v1/users/${userId}`), {

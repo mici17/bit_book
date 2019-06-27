@@ -13,6 +13,10 @@ export const Header = () => {
                     <Link to="/feed" className="header-feed">Feed</Link>
                     <Link to="/people" className="header-people">People</Link>
                     <Link to="/profile" className="header-profile">Profile</Link>
+                    <Link onClick={() => {
+                        localStorage.clear();
+                        window.location.reload();
+                    }}>Log out</Link>
                 </div>
             </div>
         </header>

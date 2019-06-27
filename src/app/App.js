@@ -4,6 +4,7 @@ import { LoginPage } from './loginPage/LoginPage';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { Header } from './Header/Header';
 import { Main } from './Main'
+import { Footer } from './Footer/Footer'
 
 
 
@@ -29,6 +30,7 @@ class AppComponent extends React.Component {
             <>
                 <Header />
                 <Main />
+                <Footer />
             </>
         )
     }

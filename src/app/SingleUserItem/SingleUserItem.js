@@ -11,10 +11,6 @@ export const SingleUserItem = (props) => {
             </div>
             <p className="singleUserItem-name">{`${user.firstName} ${user.lastName}`}</p>
             <p className="singleUserItem-bio">{user.bio}</p>
-            <div>
-                <p></p>
-                <p></p>
-            </div>
         </>
     )
 }

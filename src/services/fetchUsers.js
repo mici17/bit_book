@@ -1,6 +1,11 @@
-import {
-    User
-} from '../entities/User';
+import { User } from '../entities/User';
+import jwtDecode from 'jwt-decode';
+
+const loadId = () => {
+    const decoded = jwtDecode(localStorage.getItem("loginToken"));
+    console.log(decoded);
+    return decoded.id;
+}
 
 export const fetchUsers = () => {
     return fetch((`https://book-api.hypetech.xyz/v1/users`), {
@@ -40,3 +45,25 @@ export const fetchSingleUser = (userId) => {
         })
 
 }
+
+
+export const fetchUserProfile = () => {
+    return fetch((`https://book-api.hypetech.xyz/v1/users/${loadId()}`), {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'x-api-key': 'B1tD3V',
+            'Authorization': `Bearer ${localStorage.getItem("loginToken")}`
+        },
+    }
+
+
+    )
+        .then(response => response.json())
+        .then(user => {
+            return new User(user)
+        })
+
+}
+
+export { loadId }
